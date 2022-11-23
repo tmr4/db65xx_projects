@@ -1,0 +1,4 @@
+Release/listing/*
+Release/obj/*
+Release/*.bin
+Release/*.dbg

@@ -1,0 +1,1 @@
+.global io_irq
