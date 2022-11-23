@@ -18,7 +18,7 @@ Example of interrupt driven I/O.  Uses the 65C22 shift register for keyboard inp
 
 ### 32-bit Floating Point Package Test
 
-Example of using the [32-bit floating point package](https://github.com/tmr4/fp32).
+Example of using the [32-bit floating point package](https://github.com/tmr4/fp32).  The test adds the value `1.1234` to the floating-point stack.  Inspect `[FPSP:FPSP+7]` in the Watch pane or Debug Console to see the value on the top of the floating-point stack.
 
 * `fp32`:
 
