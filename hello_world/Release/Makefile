@@ -8,9 +8,13 @@ TARGET = $R\hello_world.bin
 SOURCES = $S\hello_world.s
 OBJECTS = $O\hello_world.o
 
+.SUFFIXES: .s .o
+
 all : $(TARGET)
 
-$(TARGET) : $(OBJECTS) $(SOURCES) $R\Makefile $R\hello_world.cfg
-	$E\ca65 --cpu 65816 -g -l $L\hello_world.lst 	-o $O\hello_world.o 	$S\hello_world.s
-	$E\ld65 -o $(TARGET) -m $L\hello_world.map -Ln $L\hello_world.sym -C $R\hello_world.cfg --dbgfile $L\hello_world.dbg $(OBJECTS)
-	copy "$L\hello_world.dbg" "$R\hello_world.dbg"
+{$S}.s{$O}.o:
+	$E\ca65 --cpu 65816 -g -l $L\$(@B).lst -o $@ $<
+
+$(TARGET) : $(OBJECTS) $(SOURCES) $R\Makefile $R\$(@B).cfg
+	$E\ld65 -o $(TARGET) -m $L\$(@B).map -Ln $L\$(@B).sym -C $R\$(@B).cfg --dbgfile $L\$(@B).dbg $(OBJECTS)
+	copy "$L\$(@B).dbg" "$R\$(@B).dbg"

@@ -16,13 +16,13 @@ OBJECTS = $O\acia.o \
 	$O\isr.o \
 	$O\via.o
 
+.SUFFIXES: .s .o
+
 all : $(TARGET)
 
-$(TARGET) : $(OBJECTS) $(SOURCES) $R\Makefile $R\int_io.cfg
-	$E\ca65 --cpu 65816 -g -l $L\acia.lst -o $O\acia.o $S\acia.s
-	$E\ca65 --cpu 65816 -g -l $L\delay.lst -o $O\delay.o $S\delay.s
-	$E\ca65 --cpu 65816 -g -l $L\int_io.lst -o $O\int_io.o $S\int_io.s
-	$E\ca65 --cpu 65816 -g -l $L\isr.lst -o $O\isr.o $S\isr.s
-	$E\ca65 --cpu 65816 -g -l $L\via.lst -o $O\via.o $S\via.s
-	$E\ld65 -o $(TARGET) -m $L\int_io.map -Ln $L\int_io.sym -C $R\int_io.cfg --dbgfile $L\int_io.dbg $(OBJECTS)
-	copy "$L\int_io.dbg" "$R\int_io.dbg"
+{$S}.s{$O}.o:
+	$E\ca65 --cpu 65816 -g -l $L\$(@B).lst -o $@ $<
+
+$(TARGET) : $(OBJECTS) $(SOURCES) $R\Makefile $R\$(@B).cfg
+	$E\ld65 -o $(TARGET) -m $L\$(@B).map -Ln $L\$(@B).sym -C $R\$(@B).cfg --dbgfile $L\$(@B).dbg $(OBJECTS)
+	copy "$L\$(@B).dbg" "$R\$(@B).dbg"
