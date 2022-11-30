@@ -10,6 +10,12 @@ OBJECTS = $O\hello_world.o
 
 .SUFFIXES: .s .o
 
+!IF !EXIST($O)
+!IF [cmd /c mkdir $O] == 0
+!MESSAGE Created $O
+!ENDIF
+!ENDIF
+
 all : $(TARGET)
 
 {$S}.s{$O}.o:

@@ -10,6 +10,12 @@ OBJECTS = $O\fp32.o  $O\main.o
 
 .SUFFIXES: .s .o
 
+!IF !EXIST($O)
+!IF [cmd /c mkdir $O] == 0
+!MESSAGE Created $O
+!ENDIF
+!ENDIF
+
 all : $(TARGET)
 
 {$S}.s{$O}.o:
