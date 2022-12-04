@@ -3,8 +3,8 @@
 
 .P816
 
-putc = $f001
-getc = $f004
+putc := $f001
+getc := $f004
 
 .zeropage
 FPSP:   .word 0

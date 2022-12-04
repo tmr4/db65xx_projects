@@ -45,8 +45,8 @@
         ; Assemble with cc65 from https://github.com/cc65/cc65
         ; Tested with db65xx from https://marketplace.visualstudio.com/items?itemName=TRobertson.db65xx
 
-putc = $f001
-getc = $f004
+putc := $f001
+getc := $f004
 
 score   = $80        ; Current score
 side    = $81        ; Current side
