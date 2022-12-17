@@ -30,9 +30,15 @@ Play chess with a cc65 port of Óscar Toledo's [Toledo Atomchess 6502](https://g
 
 ### C-based Hello World
 
-Example of C-based debugging.
+Example project for C-based debugging.
 
 * [hello_world_c](https://github.com/tmr4/db65xx_projects/tree/main/hello_world_c)
+
+### C-based Sieve of Eratosthenes
+
+Another example project for C-based debugging.
+
+* [sieve_c](https://github.com/tmr4/db65xx_projects/tree/main/sieve_c)
 
 ## Building the Example Projects
 
@@ -64,4 +70,8 @@ C-based projects assume you've set the `CC65_INC` and/or `CC65_HOME` environment
 
 ### C-based Hello World
 
-![Screenshot of db65xx debugger running with floating-point package](https://trobertson.site/wp-content/uploads/2022/12/hello_c.png)
+![Screenshot of db65xx debugger running with hello world c package](https://trobertson.site/wp-content/uploads/2022/12/hello_c.png)
+
+### C-based Sieve of Eratosthenes
+
+![Screenshot of db65xx debugger running with sieve c package](https://trobertson.site/wp-content/uploads/2022/12/sieve.png)
