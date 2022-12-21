@@ -18,9 +18,9 @@ those spots.
 const unsigned char* putc = (unsigned char*) 0xf001;
 const unsigned char* getc = (unsigned char*) 0xf004;
 
-void sieve(int *, int);
+void __cdecl__ sieve(int *, int);
 
-int main()
+int __cdecl__ main()
 {
     int *array, n=10;
     array =(int *)malloc((n + 1) * sizeof(int));
@@ -29,7 +29,7 @@ int main()
     return 0;
 }
 
-void sieve(int *a, int n)
+void __cdecl__ sieve(int *a, int n)
 {
     int i=0, j=0;
 
