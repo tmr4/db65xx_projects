@@ -34,11 +34,17 @@ Example project for C-based debugging.
 
 * [hello_world_c](https://github.com/tmr4/db65xx_projects/tree/main/hello_world_c)
 
-### C-based Sieve of Eratosthenes
+### Sieve of Eratosthenes
 
 Another example project for C-based debugging.
 
 * [sieve_c](https://github.com/tmr4/db65xx_projects/tree/main/sieve_c)
+
+### N-Queens
+
+Example of C-based input.
+
+* [nqueens](https://github.com/tmr4/db65xx_projects/tree/main/nqueens)
 
 ## Building the Example Projects
 
@@ -72,6 +78,10 @@ C-based projects assume you've set the `CC65_INC` and/or `CC65_HOME` environment
 
 ![Screenshot of db65xx debugger running with hello world c package](https://trobertson.site/wp-content/uploads/2022/12/hello_c.png)
 
-### C-based Sieve of Eratosthenes
+### Sieve of Eratosthenes
 
 ![Screenshot of db65xx debugger running with sieve c package](https://trobertson.site/wp-content/uploads/2022/12/sieve.png)
+
+### N-Queens
+
+![Screenshot of db65xx debugger running nqueens package](https://trobertson.site/wp-content/uploads/2022/12/nqueens.png)

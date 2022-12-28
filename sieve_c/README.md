@@ -13,7 +13,3 @@ Two additional steps are needed to view local variables in C functions:
 * C functions must be declared using the `cdecl` or `__cdecl__` keywords when declaring C functions or use the `--all-cdecl` command line option when running cc65.
 
 * Assemble the C library module `zeropage.s` with debug information enabled by specifying `.debuginfo +` at the beginning of the file or assembling it with the `-g` command line option.  I've done this for `sieve.lib`.
-
-## Debugging Notes
-
-While traditional debug stepping is now available in db65xx, inspecting C-based local variables is not yet available.  See the blog post linked above for work arounds.
